@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <title>Slack</title>
+</head>
+
+<body>
+  <!-- <nav  class="navbar sticky-top navbar-expand-lg"> -->
+  <nav id="navbar"  class="navbar sticky-top navbar-expand-lg">
+
+ 
+    <div class="container-fluid  ">
+
+      <div id="black-logo">
+
+        <svg   width="100" class="c-slacklogo--color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60"
+        shape-rendering="geometricPrecision">
+        <title>Slack</title>
+        <path
+          d="m75.663 47.477 2.929-6.846c3.207 2.375 7.39 3.632 11.574 3.632 3.068 0 5.02-1.187 5.02-3.003-.07-5.03-18.477-1.118-18.617-13.764-.07-6.427 5.648-11.387 13.737-11.387 4.81 0 9.622 1.188 13.038 3.913l-2.737 6.992c-3.143-2.021-7.025-3.43-10.72-3.43-2.51 0-4.184 1.187-4.184 2.725.07 4.96 18.618 2.235 18.827 14.322 0 6.567-5.579 11.178-13.528 11.178-5.856 0-11.225-1.397-15.34-4.332m116.629-9.325a8.498 8.498 0 0 1 -7.405 4.33c-4.698 0-8.506-3.816-8.506-8.523s3.808-8.523 8.506-8.523a8.498 8.498 0 0 1 7.405 4.33l8.143-4.52c-3.05-5.451-8.868-9.137-15.548-9.137-9.839 0-17.815 7.991-17.815 17.85 0 9.858 7.976 17.85 17.815 17.85 6.68 0 12.498-3.686 15.548-9.137zm-82.477 12.958h10.18v-49.86h-10.179zm95.761-49.86v49.86h10.18v-14.938l12.063 14.938h13.012l-15.34-17.746 14.224-16.559h-12.454l-11.505 13.767v-29.322zm-54.218 15.557v4.053c-1.673-2.795-5.787-4.751-10.11-4.751-8.925 0-15.967 7.895-15.967 17.815s7.042 17.885 15.967 17.885c4.323 0 8.437-1.956 10.11-4.751v4.052h10.18v-34.303zm0 21.414c-1.464 2.445-4.532 4.26-7.948 4.26-4.699 0-8.507-3.815-8.507-8.522s3.808-8.523 8.507-8.523c3.416 0 6.484 1.886 7.948 4.4z">
+        </path>
+        <path
+          d="m21.902.148c-3.299 0-5.973 2.68-5.973 5.985a5.979 5.979 0 0 0 5.973 5.985h5.974v-5.985a5.98 5.98 0 0 0 -5.974-5.985m0 15.96h-15.929c-3.299 0-5.973 2.68-5.973 5.986 0 3.305 2.674 5.985 5.973 5.985h15.93c3.298 0 5.973-2.68 5.973-5.985 0-3.306-2.675-5.986-5.974-5.986"
+          fill="#097eff"></path>
+        <path
+          d="m59.734 22.094c0-3.306-2.675-5.986-5.974-5.986s-5.973 2.68-5.973 5.986v5.985h5.973a5.98 5.98 0 0 0 5.974-5.985m-15.929 0v-15.961a5.98 5.98 0 0 0 -5.974-5.985c-3.299 0-5.973 2.68-5.973 5.985v15.96c0 3.307 2.674 5.987 5.973 5.987a5.98 5.98 0 0 0 5.974-5.985"
+          fill="#097eff"></path>
+        <path
+          d="m37.831 60a5.98 5.98 0 0 0 5.974-5.985 5.98 5.98 0 0 0 -5.974-5.985h-5.973v5.985c0 3.305 2.674 5.985 5.973 5.985m0-15.96h15.93c3.298 0 5.973-2.68 5.973-5.986a5.98 5.98 0 0 0 -5.974-5.985h-15.929c-3.299 0-5.973 2.68-5.973 5.985a5.979 5.979 0 0 0 5.973 5.985"
+          fill="#ecb12f"></path>
+        <g>
+          <path
+            d="m0 38.054a5.979 5.979 0 0 0 5.973 5.985 5.98 5.98 0 0 0 5.974-5.985v-5.985h-5.974c-3.299 0-5.973 2.68-5.973 5.985m15.929 0v15.96c0 3.306 2.674 5.986 5.973 5.986a5.98 5.98 0 0 0 5.974-5.985v-15.961a5.979 5.979 0 0 0 -5.974-5.985c-3.299 0-5.973 2.68-5.973 5.985"
+            fill="#ecb12f"></path>
+        </g>
+      </svg>
+
+      </div>
+
+      <div id="white-logo">
+
+        <svg  height="25" width="100" class="c-slacklogo--white navbarBrand navbar-brand-svg" viewBox="0 0 240 60"
+        xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+        <title>Slack</title>
+        <g fill="none">
+          <path
+          id="logo-1st-path"
+            d="m75.663 47.477 2.929-6.846c3.207 2.375 7.39 3.632 11.574 3.632 3.068 0 5.02-1.187 5.02-3.003-.07-5.03-18.477-1.118-18.617-13.764-.07-6.427 5.648-11.387 13.737-11.387 4.81 0 9.622 1.188 13.038 3.913l-2.737 6.992c-3.143-2.021-7.025-3.43-10.72-3.43-2.51 0-4.184 1.187-4.184 2.725.07 4.96 18.618 2.235 18.827 14.322 0 6.567-5.579 11.178-13.528 11.178-5.856 0-11.225-1.397-15.34-4.332m116.629-9.325a8.498 8.498 0 0 1 -7.405 4.33c-4.698 0-8.506-3.816-8.506-8.523s3.808-8.523 8.506-8.523a8.498 8.498 0 0 1 7.405 4.33l8.143-4.52c-3.05-5.451-8.868-9.137-15.548-9.137-9.839 0-17.815 7.991-17.815 17.85 0 9.858 7.976 17.85 17.815 17.85 6.68 0 12.498-3.686 15.548-9.137zm-82.477 12.958h10.18v-49.86h-10.179zm95.761-49.86v49.86h10.18v-14.938l12.063 14.938h13.012l-15.34-17.746 14.224-16.559h-12.454l-11.505 13.767v-29.322zm-54.218 15.557v4.053c-1.673-2.795-5.787-4.751-10.11-4.751-8.925 0-15.967 7.895-15.967 17.815s7.042 17.885 15.967 17.885c4.323 0 8.437-1.956 10.11-4.751v4.052h10.18v-34.303zm0 21.414c-1.464 2.445-4.532 4.26-7.948 4.26-4.699 0-8.507-3.815-8.507-8.522s3.808-8.523 8.507-8.523c3.416 0 6.484 1.886 7.948 4.4z"
+            fill="#ffffff"></path>
+          <path
+            d="m21.902.148c-3.299 0-5.973 2.68-5.973 5.985a5.979 5.979 0 0 0 5.973 5.985h5.974v-5.985a5.98 5.98 0 0 0 -5.974-5.985m0 15.96h-15.929c-3.299 0-5.973 2.68-5.973 5.986 0 3.305 2.674 5.985 5.973 5.985h15.93c3.298 0 5.973-2.68 5.973-5.985 0-3.306-2.675-5.986-5.974-5.986"
+            fill="#097eff"></path>
+          <path
+            d="m59.734 22.094c0-3.306-2.675-5.986-5.974-5.986s-5.973 2.68-5.973 5.986v5.985h5.973a5.98 5.98 0 0 0 5.974-5.985m-15.929 0v-15.961a5.98 5.98 0 0 0 -5.974-5.985c-3.299 0-5.973 2.68-5.973 5.985v15.96c0 3.307 2.674 5.987 5.973 5.987a5.98 5.98 0 0 0 5.974-5.985"
+            fill="#097eff"></path>
+          <path
+            d="m37.831 60a5.98 5.98 0 0 0 5.974-5.985 5.98 5.98 0 0 0 -5.974-5.985h-5.973v5.985c0 3.305 2.674 5.985 5.973 5.985m0-15.96h15.93c3.298 0 5.973-2.68 5.973-5.986a5.98 5.98 0 0 0 -5.974-5.985h-15.929c-3.299 0-5.973 2.68-5.973 5.985a5.979 5.979 0 0 0 5.973 5.985"
+            fill="#ecb12f"></path>
+          <path
+            d="m0 38.054a5.979 5.979 0 0 0 5.973 5.985 5.98 5.98 0 0 0 5.974-5.985v-5.985h-5.974c-3.299 0-5.973 2.68-5.973 5.985m15.929 0v15.96c0 3.306 2.674 5.986 5.973 5.986a5.98 5.98 0 0 0 5.974-5.985v-15.961a5.979 5.979 0 0 0 -5.974-5.985c-3.299 0-5.973 2.68-5.973 5.985"
+            fill="#ecb12f"></path>
+        </g>
+      </svg>
+      </div>
+
+ 
+<!-- 
+      <div class="d-hidden">
+        <img height="50" src="https://www.vectorlogo.zone/logos/slack/slack-ar21.png" alt="">
+      </div> -->
+      <button class="navbar-toggler navbar-toggler-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-list-container navbar-menu-container  navbar-collapse navbar-items"
+        id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Product
+            </a>
+            <div class="dropdown-menu products-menu-body" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Feature</a>
+              <a class="dropdown-item" href="#">Channel</a>
+              <a class="dropdown-item" href="#">Integration</a>
+              <a class="dropdown-item" href="#">Security</a>
+              <a class="dropdown-item" href="#">Slack Connect</a>
+              <a class="dropdown-item" href="#">customers</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#"><i class="bi bi-cloud-arrow-down-fill"></i> Download Slack</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Solutions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Enterprise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Resource</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <div class="navbar-left-container ">
+          <div class="navbar-right-container">
+
+            <div class="white-search-icon">
+              <i class="bi bi-search search-icon"></i>
+            </div>
+            <div class="black-search-icon">
+              <svg class="search-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="m18.78 17.72c.1467.1467.22.3233.22.53 0 .2133-.0733.39-.22.53-.16.1467-.3367.22-.53.22-.2067 0-.3833-.0733-.53-.22l-4.47-4.47c-.6667.54-1.4067.9567-2.22 1.25-.8067.2933-1.65.44-2.53.44-1.36 0-2.61333-.3367-3.76-1.01s-2.05667-1.5833-2.73-2.73-1.01-2.4-1.01-3.76.33667-2.61333 1.01-3.76 1.58333-2.05667 2.73-2.73 2.4-1.01 3.76-1.01 2.6133.33667 3.76 1.01 2.0567 1.58333 2.73 2.73 1.01 2.4 1.01 3.76c0 .88-.1467 1.7267-.44 2.54-.2933.8067-.71 1.5433-1.25 2.21zm-10.28-3.22c1.08667 0 2.0867-.27 3-.81.92-.54 1.65-1.2667 2.19-2.18.54-.92.81-1.92333.81-3.01s-.27-2.08667-.81-3c-.54-.92-1.27-1.65-2.19-2.19-.9133-.54-1.91333-.81-3-.81s-2.09.27-3.01.81c-.91333.54-1.64 1.27-2.18 2.19-.54.91333-.81 1.91333-.81 3s.27 2.09.81 3.01c.54.9133 1.26667 1.64 2.18 2.18.92.54 1.92333.81 3.01.81z" stroke="#000" stroke-width=".5"></path></svg>
+            </div>
+           <div class="sign-in-container">
+            <a id="sign-in-link" class="nav-link" href="#"> Sign in</a>
+           </div>
+            <!-- <button class="transparent-button navbar-buttons">Talk to Sales</button>
+            <button class="light-white-button navbar-buttons">Try For Free</button> -->
+
+            <div class="navbar-btn-container"> <button id="talk-to-sales" class= " navbar-button btn btn-outline-light">Talk to sales</button></div>
+           <div class="navbar-btn-container"> <button id="try-for-free-btn" class= " navbar-button btn btn-light">Try for Free</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="top-container ">
+  
+
+    <div class="parent-container p-4">
+      <div class="child-container d-flex justify-content-center ">
+        
+        <div class="header-container ">
+  
+          <div class="text-btn-container">
+  
+            <div class="top-text-container flex ">
+  
+              <h1 class="top-heading">Made for people.
+                <span class="text-warning">Built for productivity.</span>
+              </h1>
+              <p class="top-txt">Connect the right people, find anything you need and automate the rest. That’s work in Slack, your productivity platform. </p>
+  
+
+            </div>
+
+            <!-- <div class="top-button-container ">
+              <div class="sign-up-button-container">
+                <button class="top-btn signUp-email">Sign UP WITH EMAIL</button>
+              </div>
+
+              <div  class=" justify-content-center align-items-center   d-flex">
+                <i class="bi bi-google"></i> 
+                <span class="">Sign UP WITH Google</span>
+              </div>
+            </div> -->
+
+        
+            <div class="button-container row mb-2">
+  
+              <div class="  col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+  
+                <button class="btn btn-light signUp-buttons signUp-Email  ">Sign UP WITH EMAIL</button>
+  
+              </div>
+
+              <div class="  col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <span class="btn signUp-buttons btn-primary signIn-google-txt  ">
+                  <i class="bi bi-google"></i> 
+                  Sign UP WITH Google</span>
+              </div>
+  
+            </div>
+
+            </div>
+
+          </div>
+
+      </div>
+      <div class="child-container ">
+        <div class="animation-container  ">
+          <video   class="top-container-video " 
+          controls muted  autoplay loop
+            src="https://a.slack-edge.com/7eb35da/marketing/img/homepage/mobile-focused/hero/webm/hero-product-ui.webm"></video>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- <div class="container">
+
+      <div class="main-container row">
+
+        <div class="header-container col-12 col-lg-6 md-6 sm-12 ">
+  
+          <div class="text-btn-container">
+  
+            <div class="top-text-container flex ">
+  
+              <h1 class="top-heading">Made for people.
+                <span class="text-warning">Built for productivity.</span>
+              </h1>
+  
+
+            </div>
+  
+  
+            <div class="button-container row">
+  
+              <div class="  col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+  
+                <button class="btn btn-light get-slack-button  ">Sign UP WITH EMAIL</button>
+  
+              </div>
+  
+              <div class="  col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <button class="btn btn-primary get-slack-button ">
+                  Sign UP WITH Google</button>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+  
+        <div class="animation-container col-12 col-lg-6 md-6 sm-12 ">
+          <video class="top-container-video"
+            src="https://a.slack-edge.com/7eb35da/marketing/img/homepage/mobile-focused/hero/webm/hero-product-ui.webm"></video>
+        </div>
+      </div>
+
+    </div> -->
+  </div>
+
+
+
+
+  <section class="feature-section">
+
+    <div class="features-container container">
+
+
+
+      <div class="row  align-items-center d-flex ">
+
+        <div class="col-12 col-lg-2 col-md-3 col-sm-12  ">
+          <img class="company-img"
+            src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/airbnb-logo@2x.png" height="35"width="112"
+            alt="airbnb">
+
+        </div>
+        <div class="col-12 col-lg-2 col-md-3 col-sm-12 ">
+          <img class="company-img"
+            src="https://a.slack-edge.com/5ae14bf/marketing/img/logos/company/_color/logo-nasa@2x.png" height="35"width="67"
+            alt="airbnb">
+
+        </div>
+        <div class="col-12 col-lg-2 col-md-3 col-sm-12 ">
+          <img class="company-img" src="https://a.slack-edge.com/e2fa17/marketing/img/logos/company/_color/uber@2x.png"
+          height="35"width="75" alt="airbnb">
+
+        </div>
+
+        <div class="col-12 col-lg-2 col-md-3 col-sm-12 ">
+          <img class="company-img"
+            src="https://a.slack-edge.com/80588/marketing/img/logos/company/_color/target-logo@2x.png" height="35"width="48"
+            alt="airbnb">
+
+        </div>
+
+        <div class="col-12 col-lg-2 col-md-3 col-sm-12 ">
+          <img class="company-img" src="https://a.slack-edge.com/1e38e34/marketing/img/logos/company/logo-nyt.png"
+          height="35"width="230" alt="airbnb">
+
+        </div>
+
+        <div class="col-12 col-lg-2 col-md-3 col-sm-12 ">
+          <img class="company-img" src="https://a.slack-edge.com/044f5db/marketing/img/logos/company/_color/etsy@2x.png"
+          height="35"width="74" alt="airbnb">
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="parent-container middle-section-parent-container light-bg-color ">
+
+    <div class="child-container hide-on-mobile">
+
+      <video controls muted  autoplay loop class="" src="https://a.slack-edge.com/9436a9f/marketing/img/homepage/e2e-prospects/animations/webm/connectedness.webm"></video>
+    </div>
+
+    <div class="child-container hide-on-desktop">
+      <video controls muted  autoplay loop class="" src="https://a.slack-edge.com/9689dea/marketing/img/homepage/e2e-prospects/animations/webm/connectedness-mobile.webm"></video>
+
+    </div>
+    <div class="child-container flex-center-end">
+
+      <div class=" child-text-container   ">
+
+        <h1 class="child-heading">Messaging that means business</h1>
+        <p class="child-paragraph">Slack is built for work. It’s the app where you can instantly reach your team on the go or at your desk.
+        </p>
+        <a href="https://slack.com/features/channels" class="middle-container-link" data-clog-click=""
+          data-clog-ui-element="" data-qa="">Learn more about channels  <i class="bi bi-arrow-right"></i></a>           
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="parent-container middle-section-parent-container light-bg-color ">
+    <div class="child-container hide-on-desktop flex-center-start">
+      <video controls muted  autoplay loop class="" src="https://a.slack-edge.com/9689dea/marketing/img/homepage/e2e-prospects/animations/webm/flexibility-mobile.webm"></video>
+    </div>
+    <div class="child-container flex-center-start">
+
+      <div class=" child-text-container  ">
+
+        <h1 class="child-heading">Choose how you want to work</h1>
+        <p class="child-paragraph">You can chat, send audio and video clips, or hop on a huddle to talk things out live.
+        </p>
+        <a href="https://slack.com/features/channels" class="middle-container-link" data-clog-click=""
+          data-clog-ui-element="" data-qa="">Learn more about channels  <i class="bi bi-arrow-right"></i></a>           
+      </div>
+    </div>
+    
+    <div class="child-container hide-on-mobile flex-center-end">
+      <video controls muted  autoplay loop class="" src="https://a.slack-edge.com/9436a9f/marketing/img/homepage/e2e-prospects/animations/webm/flexibility.webm"></video>
+    </div>
+  </div>
+
+  <div class="parent-container middle-section-parent-container light-bg-color ">
+
+    <div class="child-container hide-on-mobile">
+
+      <video controls muted  autoplay loop class="" src="https://a.slack-edge.com/9689dea/marketing/img/homepage/e2e-prospects/animations/mp4/speed-mobile.mp4"></video>
+    </div>
+
+    <div class="child-container hide-on-desktop">
+      <video controls muted  autoplay loop class="" src="https://a.slack-edge.com/9689dea/marketing/img/homepage/e2e-prospects/animations/mp4/speed-mobile.mp4"></video>
+
+    </div>
+    <div class="child-container flex-center-end">
+
+      <div class=" child-text-container  ">
+
+        <h1 class="child-heading">Bring your team together</h1>
+        <p class="child-paragraph">At the heart of Slack are channels: organized spaces for everyone and everything
+          you need for work. In channels, it’s easier to connect across departments, offices, time zones and even
+          other companies.
+        </p>
+        <a href="https://slack.com/features/channels" class="middle-container-link" data-clog-click=""
+          data-clog-ui-element="" data-qa="">Learn more about channels  <i class="bi bi-arrow-right"></i></a>           
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <section class="analysis-section  p-4">
+   <div class="container">
+    <div class="analysis-container row ">
+      <div class="analysis-heading-container col-12">
+        <h1>Teams large and small rely on Slack</h1>
+        <p class="analysis-sub-heading">Slack securely scales up to support collaboration at the world’s biggest companies.</p>
+        <div class="col-12">
+
+          <div class="row d-flex analysis-button-container">
+            <button class="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 p-btn c-btn m-1">Meet Slack For
+              Interprise</button>
+            <button class="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 lt-btn c-btn m-1 ">Talk to Sales</button>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <ul class=" analysis-list-container">
+            <li class="analysis-list-item">
+              <p class="a-num-p">85%</p>
+              <p class="a-p">of users say Slack has improved communication*</p>
+            </li>
+            <li class="analysis-list-item">
+              <p class="a-num-p">86%</p>
+              <p class="a-p">feel their ability to work remotely has improved*</p>
+            </li>
+            <li class="analysis-list-item">
+              <p class="a-num-p">88%</p>
+              <p class="a-p">feel more connected to their teams*</p>
+            </li>
+          </ul>
+
+
+          <div class="hero-emoji-container">
+
+            <img class="hero-img h-img-1"
+              src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-handshake.png"
+              alt="">
+            <img class="hero-img h-img-2"
+              src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-lock.png" alt="">
+            <img class="hero-img h-img-3"
+              src="https://a.slack-edge.com/7460822/marketing/img/hom…/e2e-prospects/emoji/emoji-woman-technologist.png"
+              alt="">
+            <img class="hero-img h-img-4"
+              src="https://a.slack-edge.com/7460822/marketing/img/hom…/e2e-prospects/emoji/emoji-woman-technologist.png"
+              alt="">
+            <img class="hero-img h-img-5"
+              src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-skyline.png"
+              alt="">
+            <img class="hero-img h-img-6"
+              src="https://a.slack-edge.com/7460822/marketing/img/hom…/e2e-prospects/emoji/emoji-chart-upward-trend.png"
+              alt="">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+   </div>
+
+  </section>
+
+  <section class="customer-feedback-section ">
+    <div class="parent-container">
+
+      <div class="child-container">
+
+        
+        <div class="left-container">
+
+          <video controls muted  autoplay loop class="user-feedback-video"
+            src="https://a.slack-edge.com/1b4e2a3/marketing/img/homepage/true-prospects/customer-showcase/IBM_08.mp4"></video>
+        </div>
+
+      </div>
+      <div class="child-container customer-feedback-text-container">
+
+        
+        <div class=" d-flex right-container ">
+
+          <div class="middle-text-container feedback-text-container ">
+
+            <h1 class="user-feedback-txt-heading">
+              “Whether you’re a small or large organization, executing anything from a discrete modernization program to
+              a digital transformation initiative, Slack is an incredibly powerful tool in the hybrid world.”
+            </h1>
+
+            <p class="user-name"><strong>Jennifer Quinlan</strong></p>
+            <p class="user-txt-paragraph">
+              Managing Partner, IBM iX Americas Leader - Customer and Experience Transformation, IBM
+            </p>
+            <a href="https://slack.com/features/channels" class="middle-container-link" data-clog-click=""
+              data-clog-ui-element="" data-qa="">See more customer stories <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- <div class="customer-feedback-container container">
+
+      <div class="row ">
+
+        <div class="col-12 col-lg-6 col-md-12 col-sm-12 left-container">
+
+          <video class="user-feedback-video"
+            src="https://a.slack-edge.com/1b4e2a3/marketing/img/homepage/true-prospects/customer-showcase/IBM_08.mp4"></video>
+        </div>
+
+
+
+        <div class="col-12 col-lg-6 col-md-12 col-sm-12 m1-text-container d-flex right-container ">
+
+          <div class="middle-text-container feedback-text-container ">
+
+            <h1 class="user-feedback-txt-heading">
+              “Whether you’re a small or large organization, executing anything from a discrete modernization program to
+              a digital transformation initiative, Slack is an incredibly powerful tool in the hybrid world.”
+            </h1>
+
+            <p class="user-name"><strong>Jennifer Quinlan</strong></p>
+            <p class="user-txt-paragraph">
+              Managing Partner, IBM iX Americas Leader - Customer and Experience Transformation, IBM
+            </p>
+            <a href="https://slack.com/features/channels" class="middle-container-link" data-clog-click=""
+              data-clog-ui-element="" data-qa="">See more customer stories</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-feedback-text-container d-flex justify-content-center">
+        <p class="small-gray-text">* Weighted average. Based on 2,707 survey responses from weekly Slack users in the
+          U.S., UK, Australia and Canada with a ± 2% margin of error at 95% CI (December 2021).</p>
+      </div>
+
+    </div> -->
+  </section>
+
+  <section class="carousal-section light-bg-color">
+    <div class="carousal-container d-flex justify-content-center">
+      <div class="carousal-heading-container p-2">
+        <h2>Take a deeper dive into a new way to work.</h2>
+      </div>
+    </div>
+
+    <div class="row  justify-content-center">
+      <div class="carousal-card-container col-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+        <div class="card-content">
+          <div class="card-img-container">
+            <img class="card-img"
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSMHbuYvR3Yo1i8By4vn8ohlxkYsye3795b1YOmLJ8W3S_0Fm_p"
+              alt="">
+          </div>
+          <div class="card-header">
+            <span class="card-subheading">Report</span>
+            <h3 class="card-text">The State of Work 2023</h3>
+          </div>
+        </div>
+
+        <div class="card-bottom-container ">
+          <h4 class="card-bottom-txt">Read More</h4>
+          <div class="card-bottom-arrow">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousal-card-container col-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+        <div class="card-content">
+          <div class="card-img-container">
+            <img class="card-img" src="https://a.slack-edge.com/6b9d9e8/marketing/img/promos/wtny-resource-tile.jpg"
+              alt="">
+          </div>
+          <div class="card-header">
+            <span class="card-subheading">On-Demand</span>
+            <h3 class="card-text">Big things are launching. Relive the highlights of World Tour New York!</h3>
+          </div>
+        </div>
+
+        <div class="card-bottom-container ">
+          <h4 class="card-bottom-txt">Read More</h4>
+          <div class="card-bottom-arrow">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousal-card-container col-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+        <div class="card-content">
+          <div class="card-img-container">
+            <img class="card-img" src="https://a.slack-edge.com/426ed86/marketing/img/promos/promo-open-ai.jpg" alt="">
+          </div>
+
+          <div class="card-header">
+            <span class="card-subheading">Customer-Story</span>
+            <h3 class="card-text">The next big thing? AI for everyone.</h3>
+
+          </div>
+        </div>
+
+        <div class="card-bottom-container">
+          <h4 class="card-bottom-txt">Read More</h4>
+          <div class="card-bottom-arrow">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousal-card-container col-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+
+        <div class="card-content">
+
+          <div class="card-img-container">
+            <img class="card-img"
+              src="https://a.slack-edge.com/426ed86/marketing/img/promos/promo-boost-productivity.jpg" alt="">
+          </div>
+
+          <div class="card-header">
+            <span class="card-subheading">Webinar</span>
+            <h3 class="card-text">Top Slack tips to boost productivity</h3>
+
+          </div>
+        </div>
+
+        <div class="card-bottom-container">
+          <h4 class="card-bottom-txt">Read More</h4>
+          <div class="card-bottom-arrow">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="purple-section p-5">
+
+    <div class="centered-container">
+
+      <div class="white-large-heading ">
+
+        <h1>See all you can accomplish with Slack</h1>
+      </div>
+
+
+      <div class="">
+        <div class="">
+
+          <div class="row d-flex analysis-button-container">
+            <button class="col-10 col-xl-4 col-lg-4 col-md-6 col-sm-10 p-btn c-btn m-1">Try For Free</button>
+            <button class="col-10 col-xl-4 col-lg-4 col-md-6 col-sm-10 lt-btn c-btn m-1 ">Talk to Sales</button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+   <div class="container">
+
+    <div class="row hide-on-mobile">
+      <div class="footer-menu-container d-flex p-5">
+        <ul class="col-2">
+          <li class="">
+            <img
+            class="footer-logo-img"
+              height="80"
+              src="data:image/png;base64,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"
+              alt="">
+          </li>
+        </ul>
+        <ul class="col-2 col-xl-2 col-lg-2 col-md-2 col-sm-2" >
+          <li class="">
+            <span class="footer-list-heading">Why slack ? </span>
+            <ul class="footer-list-item-container link-list-parent-container ">
+              <li><a href="#">Slack vs. Email</a></li>
+              <li><a href="#">Channels</a></li>
+              <li><a href="#">Engagement</a></li>
+              <li><a href="#">Scale</a></li>
+              <li><a href="#">Watch the Demo</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+        <ul class="col-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 ">
+          <li class="">
+            <span class="footer-list-heading">Product </span>
+            <ul class="footer-list-item-container">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Enterprise</a></li>
+              <li><a href="#">Solutions</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="col-2 col-xl-2 col-lg-2 col-md-2 col-sm-2">
+          <li class="">
+            <span class="footer-list-heading"> Pricing  </span>
+            <ul class="footer-list-item-container">
+              <li><a href="#">Plans</a></li>
+              <li><a href="#">Paid vs. Free</a></li> 
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="col-2 col-xl-2 col-lg-2 col-md-2 col-sm-2">
+          <li class="">
+            <span class="footer-list-heading"> RESOURCES </span>
+            <ul class="footer-list-item-container">
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Comunity</a></li>
+              <li><a href="#">Apps</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="col-2 col-xl-2 col-lg-2 col-md-2 col-sm-2">
+          <li class="">
+            <span class="footer-list-heading">Company </span>
+            <ul class="footer-list-item-container">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Leadership</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Media Kit</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+   </div>
+
+
+    <div class="container">
+      <div class="footer-middle-container  d-flex  p-4 row">
+        <div
+          class="footer-left-container container  col-12 col-xl-8 col-lg-8 col-md-7 col-sm-12 bt-ft-txt footer-list-item-container d-flex justify-content-start">
+          <ul class="bottomfooter-links-ul">
+            <li class=""><a class="  bottom-middle-footer-text " href="#">Status</a></li>
+            <li class=""><a class="  bottom-middle-footer-text " href="#">Privacy</a></li>
+            <li class=""><a class="  bottom-middle-footer-text " href="#">Terms</a></li>
+            <li class=""><a class="  bottom-middle-footer-text " href="#"><svg fill="none" class="privacy-icon" height="14"
+                  viewBox="0 0 30 14" width="30">
+                  <path clip-rule="evenodd"
+                    d="m7.39998 12.8h6.80002l3.1-11.60005h-9.90002c-3.2 0-5.8 2.6-5.8 5.8 0 3.20005 2.6 5.80005 5.8 5.80005z"
+                    fill="#fff" fill-rule="evenodd"></path>
+                  <path clip-rule="evenodd"
+                    d="m22.6 0h-15.19998c-3.9 0-6.999996 3.1-6.999996 7s3.099996 7 6.999996 7h15.19998c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-20.99998 7c0-3.2 2.6-5.8 5.8-5.8h9.89998l-3.1 11.6h-6.79998c-3.2 0-5.8-2.6-5.8-5.8z"
+                    fill="#06f" fill-rule="evenodd"></path>
+                  <path
+                    d="m24.6001 4.0001c.2.2.2.6 0 .8l-2.1 2.2 2.2 2.2c.2.2.2.6 0 .8s-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0s-.2-.6 0-.8l2.1-2.2-2.2-2.2c-.2-.2-.2-.6 0-.8s.6-.2.8 0l2.2 2.2 2.2-2.2c.2-.2.6-.2.8 0z"
+                    fill="#fff"></path>
+                  <path
+                    d="m12.7 4.09995c.2.2.3.6.1.8l-4.2 4.9c-.1.1-.2.2-.3.2-.2.10005-.5.10005-.7-.1l-2.2-2.2c-.2-.2-.2-.6 0-.8s.6-.2.8 0l1.8 1.7 3.8-4.5c.2-.2.6-.2.9 0z"
+                    fill="#06f"></path>
+                </svg> Your Privacy Choices</a></li>
+            <li class=""><a class="  bottom-middle-footer-text " href="#">Cookie Preferences</a></li>
+            <li class=""><a class="  bottom-middle-footer-text " href="#">Contact Us</a></li>
+            <li class=""><a class="  bottom-middle-footer-text " href="#"><svg class="c-locale-new-switcher__globe"
+                  width="18" height="18" viewBox="0 0 100 100">
+                  <path
+                    d="M50.008 5.874c-11.308 0-22.613 4.3-31.219 12.906-17.211 17.211-17.211 45.226 0 62.438 17.211 17.21 45.195 17.21 62.406 0 17.212-17.212 17.243-45.227.032-62.438-8.606-8.606-19.912-12.906-31.22-12.906zm-3.125 6.125h.125v34.969H28.914c.58-10.29 4.095-20.385 10.594-28.157 2.27-2.715 4.757-4.983 7.375-6.812zm6.125 0h.062a38 38 0 0 1 7.407 6.812c6.498 7.772 10.014 17.866 10.593 28.157H53.008v-34.97zm-18.094 2.937c-7.508 8.978-11.557 20.412-12.156 32.032H11.977c.687-8.725 4.343-17.25 11.03-23.938a38.166 38.166 0 0 1 11.907-8.094zm30.219.062a38.176 38.176 0 0 1 11.812 8.063c6.685 6.685 10.369 15.19 11.063 23.906H77.227c-.598-11.59-4.623-23-12.094-31.969zm-53.156 37.97h10.78c.59 11.638 4.638 23.07 12.157 32.062a38.133 38.133 0 0 1-11.875-8.063c-6.7-6.7-10.376-15.258-11.062-24zm16.937 0h18.094V88.03h-.063c-2.644-1.838-5.146-4.135-7.437-6.875-6.512-7.787-10.025-17.876-10.594-28.188zm24.094 0H71.07c-.568 10.31-4.082 20.4-10.593 28.187-2.298 2.747-4.817 5.034-7.47 6.875V52.967zm24.219 0h10.812c-.679 8.741-4.39 17.295-11.094 24A38.07 38.07 0 0 1 65.04 85.06c.01-.011.022-.02.031-.031 7.52-8.992 11.568-20.424 12.157-32.063z">
+                  </path>
+                </svg> Change Region</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-right-container container col-12 col-xl-3 col-lg-3 col-md-5 col-sm-12  d-flex ">
+          <ul class=" bottom-footer-icons">
+            <li class=" text-color-blue footer-download-slack"> <i class="bi bi-cloud-arrow-down"> </i> Download Slack </li>
+            <li class=" social-media-icons"> <i class="bi bi-twitter"></i> </li>
+            <li class=" social-media-icons"> <i class="bi bi-facebook"></i> </li>
+            <li class=" social-media-icons"> <i class="bi bi-youtube"></i> </li>
+            <li class=" social-media-icons"> <i class="bi bi-linkedin"></i> </li>
+          </ul>
+        </div>
+    
+      </div>
+    
+    
+      <div class="bottom-most-footer ">
+        <span class="bottom-footer-text">
+          ©2023 Slack Technologies, LLC, a Salesforce company. All rights reserved. Various trademarks held by their
+          respective owners.
+        </span>
+    
+      </div>
+    
+    
+    </div>
+
+
+
+    <!-- <div class="middle-footer-container ">
+      <div class="middle-footer-left-container">
+        <ul class="footer-left-list footer-ul">
+          <li class="footer-left-container-li"> <a class=  "   " href="#">Status</a></li>
+          <li class="footer-left-container-li"> <a class=  "   " href="#">Privacy</a></li>
+          <li class="footer-left-container-li"> <a class=  "   " href="#">Terms</a></li>
+          <li class="footer-left-container-li"> <a class=  "   " href="#">Your Privacy Choices</a></li>
+          <li class="footer-left-container-li"> <a class=  "   " href="#">Cookie Preferences</a></li>
+          <li class="footer-left-container-li"> <a class=  "   " href="#">Contact Us</a></li>
+          <li class="footer-left-container-li"> <a class=  "   " href="#"> Change Region</a></li>
+        </ul>
+      </div>
+
+      <div class=" middle-footer-right-container">
+        <ul class="footer-right-list footer-ul ">
+          <li class="footer-right-container-li " ><i class="bi bi-cloud-arrow-down">  </i>  Download Slack </li>
+          <li class="footer-right-container-li social-icons "> <i class="bi bi-twitter"></i>   </li>
+          <li class="footer-right-container-li social-icons"> <i class="bi bi-facebook"></i>  </li>
+          <li class="footer-right-container-li social-icons"> <i class="bi bi-youtube"></i>   </li>
+          <li class="footer-right-container-li social-icons"> <i class="bi bi-linkedin"></i>  </li>
+        </ul>
+      </div>
+
+    </div> -->
+
+<!--     
+  <div class="bottom-most-footer ">
+    <span class="bottom-footer-text">
+      ©2023 Slack Technologies, LLC, a Salesforce company. All rights reserved. Various trademarks held by their respective owners.
+    </span>
+
+  </div> -->
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  <script>
+
+  // window.onscroll = function() {
+  //   if (window.innerWidth > 1000) {
+  //     scrollFunction();
+  //   }
+  // };
+
+  window.onscroll = function(){
+    scrollFunction();
+  }
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+
+        document.getElementById("navbar").style.top = "0";
+        document.getElementById("navbar").style.top = "0";
+        document.getElementById("navbar").style.borderRadius = "50px";
+        document.getElementById("navbar").style.background = "white";
+        document.getElementById("sign-in-link").style.color = "black"
+        document.getElementById("talk-to-sales").style.color = "#4a154b";
+        document.getElementById("talk-to-sales").style.border = "1px solid #4a154b";
+        document.getElementById("black-logo").style.display  = "flex";
+        document.getElementById("white-logo").style.display  = "none";
+        document.getElementById("try-for-free-btn").style.background  = "#4a154b";
+
+
+        var navLinks = document.querySelectorAll(".nav-item .nav-link");
+
+        for (var i = 0; i < navLinks.length; i++) {
+          navLinks[i].style.color = "black";
+        }
+
+      } else {
+
+        document.getElementById("navbar").style.top = "1px";
+        document.getElementById("navbar").style.background = "#4a154b";
+        var navLinks = document.querySelectorAll(".nav-item .nav-link");
+
+        for (var i = 0; i < navLinks.length; i++) {
+          navLinks[i].style.color = "white";
+        }
+
+        document.getElementById("sign-in-link").style.color = "white";
+        document.getElementById("talk-to-sales").style.color = "white";
+        document.getElementById("talk-to-sales").style.border = "1px solid white";
+        document.getElementById("black-logo").style.display  = "none";
+        document.getElementById("white-logo").style.display  = "flex";
+        document.getElementById("try-for-free-btn").style.background  = "initial";
+        document.getElementById("try-for-free-btn").style.color  = "white";
+
+
+
+       
+
+      }
+    }
+    </script>
+</body>
+
+</html>
